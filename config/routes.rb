@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  # Defines the root path route ("/")
-  # root "articles#index"
- 
   #index all users
   get '/users', to: 'users#index'
 
@@ -10,5 +7,9 @@ Rails.application.routes.draw do
   
   #user registration route
   post 'auth/register', to: 'users#register'
+
+  #User login
+  resources :users
+  post '/auth/login', to: 'authentication#login'
 
 end
