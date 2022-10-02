@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show]
+  skip_before_action :authenticate_request, only: %i[login register]
   
   #GET /users - all users
   def index
