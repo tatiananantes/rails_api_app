@@ -1,12 +1,20 @@
 # Task
-Create a ruby based application for a user registration and authentication system. It should be designed as a REST-ful API with JSON only responses, there is no need for views.
+Create a ruby based application for a user registration and authentication system.  
+It should be designed as a REST-ful API with JSON only responses, there is no need for views.
 
 ## Requirements
 
 ### Completed:  
 - Users need to be able to register with a username, email address and password (there is no need to send a confirmation email). 
 - Users need to be able to authenticate with their username and password.
-- When a user is successfully authenticated, the API needs to respond with a unique user token.
+- When a user is successfully authenticated, the API needs to respond with a unique user token.  
+
+| Endpoint | Verb | Description |
+| :--- | :----: | ---: |
+| /users | GET | Returns all users |
+| /users/id | GET | Returns specific user |
+| /auth/register | POST | Creates user |
+| /auth/login | POST | User login |
 
 
 ### Not completed 
@@ -26,3 +34,5 @@ Create a ruby based application for a user registration and authentication syste
 ![Screenshot 2022-10-02 at 18 34 10](https://user-images.githubusercontent.com/10349072/193468158-67597396-e5d7-4aa5-8388-5e6d2e5cdb5a.png)
 ### User token in response when logged in with correct password
 ![image](https://user-images.githubusercontent.com/10349072/193468297-2ad83989-237f-4006-b740-66c82029004a.png)
+
+
