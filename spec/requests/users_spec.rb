@@ -23,22 +23,22 @@ RSpec.describe "Users", type: :request do
         expect(json[:message]).to eq("User has been successfully created!")
         expect(User.count).to eq(1)
     end
-  end
 
-  scenario 'when request has invalid user attributes' do
-    post '/auth/register', params: {
-      user: {
-        username:'',
-        password:'',
-        email: 'boomer@mail.com'
+    scenario 'when request has invalid user attributes' do
+      post '/auth/register', params: {
+        user: {
+          username:'',
+          password:'',
+          email: 'boomer@mail.com'
+        }
       }
-    }
-    # returns error message
-    expect(response.status).to eq(422)
+      # returns error message
+      expect(response.status).to eq(422)
 
-    json = JSON.parse(response.body).deep_symbolize_keys
-    expect(json[:username]).to eq(["can't be blank"])
+      json = JSON.parse(response.body).deep_symbolize_keys
+      expect(json[:username]).to eq(["can't be blank"])
 
-    expect(User.count).to eq(0)
+      expect(User.count).to eq(0)
+    end
   end
 end
