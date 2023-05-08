@@ -1,12 +1,9 @@
-# Task
-Create a ruby based application for a user registration and authentication system.  
-It should be designed as a REST-ful API with JSON only responses, there is no need for views.
+# :door: User registration and authentication Rails API APP 
+Designed as a REST-ful API with JSON only responses, there are no views.
 
-## Requirements
-
-### Completed:  
-- Users need to be able to register with a username, email address and password (there is no need to send a confirmation email). 
-- Users need to be able to authenticate with their username and password.
+## Specs
+- Users are able to register with a username, email address and password (no requirements to send a confirmation email). 
+- Users are able to authenticate with their username and password.
 - When a user is successfully authenticated, the API needs to respond with a unique user token.  
 
 | Endpoint | Verb | Description |
@@ -16,12 +13,6 @@ It should be designed as a REST-ful API with JSON only responses, there is no ne
 | /auth/register | POST | Creates user |
 | /auth/login | POST | User login |
 
-
-### Not completed 
-- Groups have a unique name and can have many users and users can belong to many groups.
-- Some users have admin privileges and they need to be able to carry out the following actions using a valid user token:
-  - Create groups
-  - Assign users to groups
 
 ## Screenshots of the API's responses (Postman):  
 ### User can register with username, email and password
